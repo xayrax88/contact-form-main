@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div class="form-box row align-center">
+    <div class="col-lg-8 col-xl-7">
+      <form action="" method="get" class="form" id="contactForm">
 
-  Contact Us
+        <h2>Contact Us</h2>
+        <div class="flex column align-center text-center space-between">
+          <!-- First Name -->
+          <div class="form-floating mb-3">
+            <label for="first name">First Name:</label>
+            <input type="text" name="first name" id="name" required /> field is required
+          </div>
+          <!-- Last Name -->
+          <div class="form-floating mb-3">
+            <label for="last name">Last Name:</label>
+            <input type="text" name="last name" id="name" required />This field is required
+          </div>
 
-  First Name
-  This field is required
+          <!-- Email -->
+          <div class="form-floating mb-3"></div>
+          <label for="email">Email address:</label>
+          <input type="text" name="email" id="" required />
+          This field is required
+        </div>
 
-  Last Name
-  This field is required
+        <!-- Message input-->
+        <div class="form-floating mb-3">
+          <textarea class="form-control" name="Message" rows="6" id="message" type="text"
+            placeholder="Enter your message here..." style="height: 10rem" required></textarea>
+          <label for="Message">Message</label>
+        </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <!-- Submit Button-->
+        <button class="contact-btn btn btn-secondary btn-xl" id="submitButton" type="submit">Send</button>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      </form>
+    </div>
   </div>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
 </body>
+
 </html>
