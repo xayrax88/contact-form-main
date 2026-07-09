@@ -30,13 +30,19 @@ body {
 
 input,
 fieldset,
-.msg-input-box {
+.msg-input-box,
+button {
   border-radius: 0.5em;
 }
 
 h1 {
   font-size: 32px;
   margin-bottom: 0.5em;
+}
+
+.checkbox-container {
+  display: flex;
+  width: 100%;
 }
 /* Footer styling */
 footer {
@@ -127,8 +133,6 @@ footer {
     border-radius: 8px;
   }
   .checkbox-container {
-    display: flex;
-    width: 295px;
     height: 48px;
   }
 
@@ -292,7 +296,6 @@ footer {
   }
 
   .checkbox-container {
-    display: flex;
     align-items: center;
     height: 24px;
   }
@@ -422,8 +425,37 @@ footer {
     margin-left: 1em;
   }
 
+  .general-input,
+  .support-input {
+    height: 24px;
+    width: 24px;
+  }
+
   .msg-input-box {
     height: 151px;
     width: 100%;
+  }
+
+  .checkbox-container {
+    height: 24px;
+  }
+  .checkbox-text {
+    margin-left: 0.5em;
+  }
+
+  .submit-box,
+  button {
+    width: 100%;
+  }
+  button {
+    height: 59px;
+    background-color: var(--green-600);
+    border-style: none;
+  }
+
+  .submit-text {
+    font-size: 20px;
+    color: var(--white);
+    font-weight: bold;
   }
 }
