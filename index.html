@@ -32,7 +32,7 @@
               <label class="first-name-label" for="firstName" name="firstName">First Name</label>
             </div>
             <input class="first-name-input border-color-grey-500" type="text" id="firstName" name="firstName" required>
-
+            <p id="firstNameError" class="error-message hidden"></p>
           </div>
 
           <div class="last-name-block">
@@ -40,7 +40,7 @@
               <label class="last-name-label" for="lastName" name="lastName">Last Name</label>
             </div>
             <input class="last-name-input" type="text" for="lastName" id="lastName">
-
+            <p id="lastNameError" class="error-message hidden"></p>
           </div>
 
           <div class="email-block">
@@ -48,19 +48,29 @@
               <label class="email-label" for="email" name="email">Email Address</label>
             </div>
             <input class="email-input" type="text" for="email" id="email">
-
+            <p id="emailError" class="error-message hidden"></p>
           </div>
 
-          <div class="contact-method-box">
-            <legend><span>Query Type</span></legend>
+          <div class="contact-method-box" id="queryContainer">
+
             <fieldset>
-              <input class="general-input contact-method" type="radio" id="generalEnquiry" name="options" value="1">
-              <span class="contact-method">General Enquiry</span>
+
+              <legend><span>Query Type</span></legend>
+
+              <label class="query-option general-option">
+                <input class="general-input contact-method" type="radio" id="generalEnquiry" name="options" value="1">
+                <span class="contact-method">General Enquiry</span>
+              </label>
+
+              <label class="query-option support-option">
+                <input class="support-input contact-method" type="radio" id="supportRequest" name="options" value="2">
+                <span class="contact-method">Support Request</span>
+              </label>
+
             </fieldset>
-            <fieldset>
-              <input class="support-input contact-method" type="radio" id="supportRequest" name="options" value="2">
-              <span class="contact-method">Support Request</span>
-            </fieldset>
+
+            <p id="queryError" class="error-message hidden"></p>
+
           </div>
 
           <div class="message-box">
@@ -68,20 +78,27 @@
               <label for="message"><span>Message</span></label>
             </div>
             <textarea class="msg-input-box" name="message" id="message" cols="30" rows="10" required></textarea>
+            <p id="msgBoxError" class="error-message hidden"></p>
           </div>
 
 
           <div class="checkbox-container">
-            <input class="checkbox" type="checkbox">
-            <div class="checkbox-text">
-              <p>I consent to being contacted by the team. *</p>
-            </div>
+
+            <input class="checkbox" id="checkBox" type="checkbox">
+
+            <label class="checkbox-text" for="checkBox">
+              I consent to being contacted by the team. *
+            </label>
+
+            <p id="checkboxError" class="error-message hidden"></p>
+
           </div>
 
           <div class="submit-box">
-            <button type="submit">
+            <button type="submit" id="submitButton">
               <span class="submit-text">Submit</span>
             </button>
+            <p id="emailError" class="error-message hidden"></p>
           </div>
 
         </div>
