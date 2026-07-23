@@ -65,12 +65,10 @@ footer {
 .error-message {
   color: var(--red-error);
 }
-
 input.error,
 textarea.error {
   border-color: var(--red-error);
 }
-
 #queryContainer.error .query-option {
   border-color: var(--red-error);
 }
@@ -78,6 +76,38 @@ textarea.error {
   grid-area: error;
 }
 
+/* Success Message */
+.success-message-container {
+  display: none;
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 450px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--green-600);
+  z-index: 1000;
+}
+.success-message-container.show {
+  display: block;
+  color: var(--green-200);
+}
+.success-title-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75 rem;
+  font-weight: bold;
+}
+.success-icon {
+  width: 20px;
+  height: 20px;
+}
+.success-message {
+  margin: 0;
+  line-height: 1.5;
+}
 /* Media queries */
 
 /* Mobile 390px - 425px*/
@@ -482,10 +512,14 @@ textarea.error {
   legend {
     margin-bottom: 0.5em;
   }
+
   .first-name-input,
   .last-name-input,
-  .email-input {
-    height: 52px;
+  .email-input,
+  .msg-input-box {
+    height: auto;
+    font-size: 20px;
+    padding: 1em;
   }
 
   /* Desktop Query styling */

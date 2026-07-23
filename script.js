@@ -6,6 +6,7 @@ let supportInput = document.getElementById('supportRequest');
 let messageInput = document.getElementById('message');
 let checkbox = document.getElementById('checkBox');
 let submitBtn = document.getElementById('submitButton');
+let successMessage = document.getElementById("successMessage")
 
 //Error Elements
 const firstNameError = document.getElementById("firstNameError");
@@ -97,6 +98,7 @@ function validateQuery() {
     } else {
         queryError.textContent = "";
         queryError.classList.add("hidden")
+        return true;
     }
 }
 function validateMessage() {
@@ -126,6 +128,7 @@ function validateCheckbox() {
     } else {
         checkboxError.textContent = ""
         checkboxError.classList.add("hidden");
+        return true;
     }
 }
 
@@ -139,12 +142,25 @@ function handleSubmit(e) {
     const messageValid = validateMessage();
     const checkboxValid = validateCheckbox();
 
+    console.log({
+        firstNameValid,
+        lastNameValid,
+        emailValid,
+        queryValid,
+        messageValid,
+        checkboxValid
+    });
+    console.log("The form was completed");
     if (firstNameValid && lastNameValid && emailValid && queryValid && messageValid && checkboxValid) {
-        alert(`
-        Message Sent!
-        Thanks for completing the form. We'll be in touch soon!
-        `)
-        console.log("The form was completed");
+        // alert(`
+        // Message Sent!
+        // Thanks for completing the form. We'll be in touch soon!
+        // `)
+        successMessage.classList.add("show");
+        setTimeout(function () {
+            successMessage.classList.remove("show");
+        }, 80000);
+        return true;
     }
 }
 submitBtn.addEventListener("click", handleSubmit);
