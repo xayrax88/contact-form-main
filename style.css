@@ -1,3 +1,4 @@
+/*Global styles*/
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +26,6 @@ body {
   border-radius: 16px;
   background-color: var(--white);
   margin: 1rem auto;
-  border-radius: 16px;
   /* border: solid var(--red-error); */
 }
 fieldset {
@@ -74,6 +74,10 @@ textarea.error {
 #queryContainer.error .query-option {
   border-color: var(--red-error);
 }
+#queryError {
+  grid-area: error;
+}
+
 /* Media queries */
 /* Mobile size  390px - 425px*/
 @media only screen and (max-width: 425px) {
@@ -84,13 +88,13 @@ textarea.error {
     /* border: solid var(--red-error); */
   }
 
+  /* Mobile General Styling */
   div.first-name-block,
   div.last-name-block,
   div.email-block {
     height: 83px;
     width: 295px;
   }
-
   .first-name-input,
   .last-name-input,
   .email-input {
@@ -106,8 +110,6 @@ textarea.error {
   .msg-input-box {
     padding: 24px 12px;
   }
-
-  /* Margin bottom spacing */
   div.first-name-block,
   div.last-name-block,
   div.email-block,
@@ -118,6 +120,7 @@ textarea.error {
     margin-bottom: 1.5em;
   }
 
+  /* Mobile Query Styling */
   .contact-method-box {
     display: grid;
     grid-template-columns: 1fr;
@@ -132,25 +135,17 @@ textarea.error {
     border: 0;
     padding: 0;
   }
-
   .contact-method-box legend {
     grid-area: legend;
     margin-bottom: 1rem;
   }
-
   .general-option {
     grid-area: general;
     margin-bottom: 0.75rem;
   }
-
   .support-option {
     grid-area: support;
   }
-
-  #queryError {
-    grid-area: error;
-  }
-
   .query-option {
     display: flex;
     align-items: center;
@@ -161,26 +156,17 @@ textarea.error {
     border-radius: 8px;
     cursor: pointer;
   }
-
   .query-option span {
     margin-left: 1rem;
   }
-
   .general-input,
   .support-input {
     width: 20px;
     height: 20px;
     margin: 0;
   }
-  /* .general-input,
-  .support-input {
-    margin-left: 0.5em;
-  } */
-  /* span.contact-method {
-    margin-left: 0.5em;
-    margin-right: 0;
-  } */
 
+  /* Mobile Text Area */
   .message-box {
     height: 272px;
     width: 295px;
@@ -191,14 +177,16 @@ textarea.error {
     width: 100%;
     border-radius: 8px;
   }
+
+  /* Mobile Checkbox Styling */
   .checkbox-container {
     height: 48px;
   }
-
   .checkbox-text {
     margin-left: 1em;
   }
 
+  /* Mobile Submit Styling */
   button {
     height: 59px;
     width: 295px;
@@ -216,23 +204,13 @@ textarea.error {
 /* Tablet  425px-768px*/
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .form-box {
-    width: 690px;
+    width: 100%;
     padding: 30px 30px 40px;
     margin: 1em;
     /* border: solid var(--red-error); */
   }
 
-  .general-input,
-  .support-input {
-    height: 24px;
-    width: 24px;
-  }
-
-  .checkbox-text {
-    margin-left: 1em;
-  }
-
-  /* Grid Parent Container */
+  /* Tablet Grid Parent Container */
   .grid-box {
     display: grid;
     gap: 1.5rem;
@@ -247,7 +225,7 @@ textarea.error {
       "submit submit";
   }
 
-  /* Grid children assignment */
+  /* Tablet Grid Children Assignment */
   .title {
     grid-area: title;
   }
@@ -273,12 +251,12 @@ textarea.error {
     grid-area: submit;
   }
 
+  /* Tablet General Shared Styling */
   .first-name-input,
   .last-name-input,
   .email-input {
     height: 52px;
   }
-
   .first-name-input,
   .last-name-input,
   .email-input,
@@ -288,7 +266,6 @@ textarea.error {
   button {
     border-radius: 8px;
   }
-
   .first-name-input,
   .last-name-input,
   .email-input,
@@ -302,11 +279,24 @@ textarea.error {
   .checkbox-container {
     width: 100%;
   }
-  /* Parent container for contact */
+  .msg-label-box,
+  .first-name-label-box,
+  .last-name-label-box,
+  .email-label-box {
+    margin-bottom: 1em;
+  }
+  .first-name-input,
+  .last-name-input,
+  .email-input,
+  .msg-input-box {
+    font-size: 18px;
+    padding: 0.5em;
+  }
+
+  /* Tablet Query Styling */
   .contact-method-box {
     width: 100%;
   }
-
   .contact-method-box fieldset {
     display: grid;
     column-gap: 1rem;
@@ -318,19 +308,15 @@ textarea.error {
     border: 0;
     padding: 0;
   }
-
   .contact-method-box legend {
     grid-area: legend;
   }
-
   .general-option {
     grid-area: general;
   }
-
   .support-option {
     grid-area: support;
   }
-
   .query-option {
     display: flex;
     align-items: center;
@@ -341,29 +327,21 @@ textarea.error {
     border-radius: 8px;
     cursor: pointer;
   }
-
   .query-option span {
     margin-left: 1rem;
   }
-
-  .msg-label-box,
-  .first-name-label-box,
-  .last-name-label-box,
-  .email-label-box {
-    margin-bottom: 1em;
+  .general-input,
+  .support-input {
+    height: 24px;
+    width: 24px;
   }
 
-  .first-name-input,
-  .last-name-input,
-  .email-input,
-  .msg-input-box {
-    font-size: 18px;
-    padding: 0.5em;
-  }
+  /* Tablet Message Text Area */
   textarea {
     height: 156px;
   }
 
+  /* Tablet Checkbox Styling */
   .checkbox-container {
     display: grid;
     grid-template-columns: 18px minmax(0, 1fr);
@@ -376,29 +354,26 @@ textarea.error {
     width: 100%;
     height: auto;
   }
-
   .checkbox {
     grid-area: checkbox;
     width: 18px;
     height: 18px;
     margin: 0;
   }
-
   .checkbox-text {
     grid-area: text;
     min-width: 0;
     margin: 0;
     white-space: nowrap;
   }
-
   #checkboxError {
     grid-area: error;
   }
 
+  /* Tablet Submit styling */
   .submit-box {
     margin-bottom: 0.5em;
   }
-
   button {
     height: 59px;
     background-color: var(--green-600);
@@ -413,12 +388,12 @@ textarea.error {
 /* Desktop size 992px, 1200px, 1440px*/
 @media only screen and (min-width: 769px) and (max-width: 1440px) {
   .form-box {
-    width: 763px;
+    width: 100%;
     padding: 40px;
     /* border: solid var(--red-error); */
   }
 
-  /* Grid Parent Container */
+  /* Desktop Grid Parent Container */
   .grid-box {
     display: grid;
     gap: 1.5rem;
@@ -433,7 +408,7 @@ textarea.error {
       "submit submit";
   }
 
-  /* Grid children assignment */
+  /* Desktop Grid children assignment */
   .title {
     grid-area: title;
   }
@@ -459,6 +434,7 @@ textarea.error {
     grid-area: submit;
   }
 
+  /* Desktop Shared general styling */
   .first-name-block,
   .last-name-block,
   .email-block,
@@ -468,7 +444,6 @@ textarea.error {
   .contact-method-box {
     width: 100%;
   }
-
   .msg-label-box,
   .first-name-label-box,
   .last-name-label-box,
@@ -476,59 +451,39 @@ textarea.error {
   legend {
     margin-bottom: 0.5em;
   }
-
   .first-name-input,
   .last-name-input,
   .email-input {
     height: 52px;
   }
 
-  /* Parent container for contact */
-  .contact-method-box {
+  /* Desktop Query styling */
+  .contact-method-box fieldset {
     display: grid;
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "legend legend"
-      "general support"
-      "error error";
+      "general support";
     border: 0;
     padding: 0;
-    width: 100%;
   }
-
-  /* fieldset {
-    display: flex;
-    align-items: center;
-  } */
-
-  /* Children grid items for contact */
-  /* legend {
-    grid-area: legend;
-  } */
-  /* fieldset:first-of-type {
-    grid-area: general;
-  } */
-  /* fieldset:last-of-type {
-    grid-area: support;
-  } */
-
   .contact-method-box legend {
     grid-area: legend;
   }
-
+  .general-input,
+  .support-input {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
   .general-option {
     grid-area: general;
   }
-
   .support-option {
     grid-area: support;
   }
-
-  #queryError {
-    grid-area: error;
-  }
-
   .query-option {
     display: flex;
     align-items: center;
@@ -539,30 +494,40 @@ textarea.error {
     border-radius: 8px;
     cursor: pointer;
   }
-
   .query-option span {
     margin-left: 1rem;
   }
 
-  .general-input,
-  .support-input {
-    width: 24px;
-    height: 24px;
-    margin: 0;
-  }
-
+  /* Desktop Message Text area*/
   .msg-input-box {
     height: 151px;
     width: 100%;
   }
 
+  /* Desktop Checkbox Styling */
   .checkbox-container {
-    height: 24px;
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    grid-template-areas:
+      "checkbox text"
+      "error error";
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    height: auto;
   }
   .checkbox-text {
-    margin-left: 0.5em;
+    grid-area: text;
+    min-width: 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+  #checkboxError {
+    grid-area: error;
   }
 
+  /* Desktop Submit Styling */
   .submit-box,
   button {
     width: 100%;
