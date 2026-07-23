@@ -97,7 +97,7 @@ textarea.error {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.75 rem;
+  margin-bottom: 0.75rem;
   font-weight: bold;
 }
 .success-icon {
@@ -108,6 +108,7 @@ textarea.error {
   margin: 0;
   line-height: 1.5;
 }
+
 /* Media queries */
 
 /* Mobile 390px - 425px*/
